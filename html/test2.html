@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert("홈페이지 방문을 환영합니다.");
+        // 바로 경고창이 뜬다. 실무에서는 쓰면 안된다.
+        alert("20"*5); //100이 출력된다. Java보다 관대하다
+        function hello(na){ //저절로 형추론으로 na앞에 Java처럼 형타입을 선언안해줘도된다.
+            let 안녕 = 50; //let은 형추론
+            alert(na + "님 방문을 환영한다데스")
+            alert("철수가 말했다. " +안녕 + "이라고")
+            //철수가 말했다.50이라고 출력
+            alert("철수가 말했다.  '안녕' 이라고")
+            //철수가 말했다.'안녕'이라고 출력
+            alert(na*39);
+        }
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+        function sum(a,b){
+            return a+b;
+        }
+        let result = sum(10,30);
+        alert(result);
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+        let sum2;
+        let result2 = function hap(a,b){
+            return a+b;
+        }
+        alert(result2(14,2444));
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+        let result3 = (a,b) => a*b;
+        //(a,b) < 매개변수
+        // => < functuon 
+        // a*b < return값
+        alert(result3(10,32));
+        
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+    <h1 onclick="hello(33);">니 내 누군지아니?
+        바로바로 선달이의 홈페이지
+    </h1>
+
+    <button onclick="hello('김철수');">헤윙</button>
+    
+</body>
+</html>
