@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+            width: 200px;
+            position: relative;
+
+        }
+    </style>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- jquery 라이브러리  -->
+    <script>
+        $(function () {
+            $("img").click(function () {
+                $(this).delay(1000).animate({ //delay 1초 후에 작동
+                    left:300,
+                    top: 300
+                },2000);
+                // 600은 거리 / 3000은 걸리는 시간 >> 5초
+                //left는 오른쪽으로 가는 거리
+                //top는 아래로 가는 거리
+                $("img").animate({
+                    left:100
+                    
+                }, 4000)
+                .animate({
+                    left : 100,
+                    top :0
+                },1000);
+                //queue에 보관되어 있어서 순서대로 동작한다.
+                // 하나가 끝나면 다음게 동작하고 그다음 ~~
+
+            });
+            $("button").click(function() {
+                $("img").clearQueue();
+            });
+
+
+        });
+    </script>
+
+</head>
+<body>
+    <h1>큐(Queue)를 사용하는 창그니</h1>
+    <h2>사진을 눌러보삼</h2>
+    <button>큐(Queue)비우기</button>
+    <p>==================================</p>
+    <img src="images/guni.png" alt=""> <br>
+    <img src="images/guni.png" alt="">
+    <img src="images/guni.png" alt="">
+
+
+
+    
+</body>
+
+
+</html>
