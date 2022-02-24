@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그</title>
+
+</head>
+<body>
+    <h2>비상 연락망</h2>
+    <figure>
+        <figcaption> 주소록 </figcaption>
+        <table border="1">
+            <tr>
+                <th>이름</th>
+                <th>전화번호</th>
+                <th>이메일</th>
+                <th>기타</th>
+            </tr>
+            <tr>
+                <td>김철수</td>
+                <td>010-1234-1234</td>
+                <td>chulsu@naver.com</td>
+                <td rowspan="3">일반회원</td>
+                <!-- rowspan : 아래 3개의 행을 합친다. -->
+            </tr>
+            <tr>
+                <td>이영희</td>
+                <td>010-1111-1111</td>
+                <td>younghee@yahoo.co.kr</td>
+            </tr>
+        </table>
+    </figure>
+
+    <h2>주 식단 메뉴</h2>
+    <table border="1">
+        <caption>테이블의 제목 caption
+            <p>(비룡산악회)
+                <strong>하윙</strong>
+            </p>
+        </caption>
+        
+        <tr>
+            <th>주단위</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>
+        <tr>
+            <td>아침</td>
+            <td>된장찌개</td>
+            <td>김치찌개</td>
+            <td rowspan="3">특별식</td>
+            <td>해장국</td>
+            <td>김치찌개</td>
+        </tr>
+        <tr>
+            <td>점심</td>
+            <td>칼국수</td>
+            <td>비빔밥</td>
+            <!-- <td></td> -->
+            <td>계란국</td>
+            <td rowspan="2">라면</td>
+            
+        </tr>
+        <tr>
+            <td>저녁</td>
+            <td>부대찌개</td>
+            <td>순대국</td>
+            <!-- <td></td> -->
+            <td>잔치국수</td>
+            <!-- <td></td> -->
+            
+        </tr>
+        <tr>
+            <th colspan="9">시간을 정확히 지켜주세요 </th>
+        </tr>
+
+
+    </table>
+    
+    
+</body>
+</html>

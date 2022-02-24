@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그들</title>
+</head>
+<body>
+
+    <h1>로그인</h1>
+    <form action="login.jsp" method="post">
+        <p>
+            
+        <label for="id">아이디</label>
+        <input type="text" name="id" id="id">
+        </p>
+
+        <label for="pass">비밀번호</label>
+        <input type="password" name="pw" id="pass">
+        <!-- 
+            name 은 변수로서의 이름
+            id는 홈태그를 좀더 이쁘게 꾸미는 용도 무슨말이지..?
+
+         -->
+
+        <p>
+            <input type="submit" value="로그인">
+
+        </p>
+
+    </form>
+
+    <!-- 
+        태그 
+        - 인라인 레벨요소
+            a,img,... 자기 공간만 차지한다.
+
+        - 블럭 레벨요소
+            크기를 지정할 수 있따.
+
+     -->
+
+     <form action="">
+        <h2>방과후 특별 활동 선택</h2>
+        <input type="checkbox" id="writing"><label for="writing">서예</label>
+        <input type="checkbox" id="soccer"><label for="soccer">축구</label>
+        <input type="checkbox">수영
+        <input type="checkbox">탁구
+
+
+
+     </form>
+
+    
+</body>
+</html>
