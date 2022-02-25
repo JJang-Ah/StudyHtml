@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 태그</title>
+
+</head>
+<body>
+    
+    <h1>오디오, 비디오 태그</h1>
+    <audio src="images/da.mp3" controls autoplay></audio>
+    <!-- 요즘에는 autoplay를 막아논 브라우저가 대부분이다. 
+        (웹 접근성 법률을 지키기위해) -->
+
+    
+    <video controls poster="images/2014-07-07-17;01;11_04.png">
+        <!-- poster : 썸네일 >> 동영상 재생전 표지사진 -->
+        <source src="images/cross.mp4" type="video/mp4"> 
+        <source src="images/cross.ogv" type="video/ogg"> 
+        <!-- 둘중에 먼저 걸리는 걸 실행
+            하나 걸리면 그 다음으로 남은 것들은 걸리지않는ㄷ.ㅏ -->
+
+
+    </video>
+
+
+</body>
+
+</html>
