@@ -1,0 +1,210 @@
+
+<!-- 선생님이 해주신 회원 가입 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #memberArea {
+            width: 800px;
+            margin: 0 auto;
+            /* margin : 좌우 정렬
+                auto : 자동으로 가운데 정렬 */
+        }
+        #memberArea h2{
+            font-size: 20px;
+            color: #ff3cff;
+            border-bottom: 2px solid #ff6748;
+            padding-bottom: 15px;
+            /* border-bottom : 박스 아래부분만 선 존재 */
+            /* solid : 박스 타입 */
+            /* padding : 안쪽 여백 */
+        }
+        .formSign{
+            text-align: right;
+            margin-top: 50px;
+            /* text-align : right 오른쪽 정렬*/
+            /* margin-top : 윗 바깥 */
+        }
+        .require{
+            color: #a73951;
+            font-size: 8px;
+            top: -4px;
+            position: relative;
+        }
+        fieldset{
+            border: 0;
+        }
+        #joinForm{
+            border-top: 2px solid gray;
+        }
+        #joinForm p{
+            /* id는 #을 붙인다. */
+
+            border-bottom: 1px solid gray;
+            padding: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        #joinForm label, .mailing em{
+            /* display: inline-block; */
+            float: left;
+            width: 150px;
+            padding: 13px 20px;
+            font-weight: bold;
+            color: #666;
+            background-color: #fffcef;
+            /* display : 인라인으로 */
+            /* font-weight : bold > 글씨체가 굻어진다. */
+        }
+        
+        #joinForm .mailing label{
+            background: none;
+            width: auto;
+            padding: 0;
+            /* display: inline; */
+            float: none;
+        }
+        #joinForm input:not([type="radio"]){
+            padding: 3px;
+            border: 1px solid #aaa;
+            height: 18px;
+            padding-left: 5px;
+            margin: 10px 0;
+        }
+        #joinForm input[type="radio"]{
+            margin: 0;
+
+        }
+        input#address {
+            display: block;
+            margin: 0;
+        }
+        .findCheck{
+            font-size: 13px;
+            background-color: #fe8389;
+            text-decoration: none;
+            padding: 3px 15px;
+            margin-left: 5px;
+            color: #fffcef;
+            border-radius: 20px;
+
+            /* text-decoration : none <a>앵커태그에 원래 있던
+                밑줄을 없애준다.
+                border-radius : > 테두리를 둥글게 만들어준다. */
+        }
+        .labelAddress{
+            /* 클래스는 앞에 . 붙이고 쓴다. */
+            height: 50px;
+            line-height: 55px;
+            /* line-height : > 줄간격 위아래를 맞춰준다. */
+        }
+        .mailing em{
+            font-style: normal;
+            height: 35px;
+            line-height: 35px;
+            
+        }
+        .mailing span{
+            display: block;
+            /* 디스플레이 블럭을 줘야 아래 애들이 위로 안올라온다. */
+            margin: 10px 0;;
+        }
+        .btnJoinArea{
+            text-align: center;
+            margin: 15px 0;
+        }
+        .btnJoinArea button{
+            padding: 8px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            border: none;
+            /* border : none >> 테두리 제거 */
+            background-color: #666;
+            color: #fffcef;
+        }
+        #btnJoin::before{
+            font-family: 'Webdings';
+            content: 'm';
+            font-size: relative;
+            position: relative;
+            left: -5px;
+            /* webdings란 폰트에서
+                m버튼의 아이콘을 불러옴 */
+        }
+
+    </style>
+</head>
+<body>
+    <section id="memberArea">
+        <h2>회원가입</h2>
+        
+        <p class="formSign"><span class="require">★</span>은 반드시 입력하여하 하는 항목입니다.</p>
+        <form action="join.jsp" method="post" id="joinForm">
+            <fieldset>
+                <p>
+                    <label for="name">성명<span class="require">★</span></label>
+                    <input type="text" name="name" id="name" required placeholder="홍길동">
+                    <!-- required : 필수적으로 입력되어야함 -->
+                </p>
+                <p>
+                    <label for="name">아이디<span class="require">★</span></label>
+                    <input type="text" name="id" id="id" required placeholder="Guest">
+                    <a href="idCheck.jsp" target="_blank" class="findCheck">ID중복확인</a>
+                </p>
+                
+                <p>
+                    <label for="name">비밀번호<span class="require">★</span></label>
+                    <input type="password" name="pass" id="pass" required placeholder="영문/숫자 4~8자 이내">
+                </p>
+                <p>
+                    <label for="name">비밀번호 확인<span class="require">★</span></label>
+                    <input type="password" name="pass2" id="pass2" required>
+                </p>
+                <p>
+                    <label for="address" class="labelAddress">주소</label>
+                    <input type="tel" name="zipcode" id="zipcode" size="6" maxlength="5">
+                    <a href="zipcode.jsp" id="btnZipcode" class="findCheck">우편번호 찾기</a>
+                    <br>
+                    <input type="text" name="address" id="address" size="60" maxlength="100" placeholder="입력 예) 성남시 분당구 미금일로 123 대왕빌딩 7층">
+                </p>
+                <p>
+                    <label for="tel">연락처</label>
+                    <input type="tel" name="tel" id="tel" placeholder="입력 예)01012341234"
+                     maxlength="11" size="20" title="하이픈(-)은 입력할 수 없습니다.">
+                     <!-- title : 마우스 가져다대면 마우스에 붙는 설명창 -->
+                </p>
+                <p>
+                    <label for="email">이메일<span class="require">★</span></label>
+                    <input type="email" name="email" id="email" size="30" required
+                     placeholder="입력 예) ezen@gmail.com">
+                </p>
+                <p class="mailing">
+                    <em>메일링 리스트 가입</em>
+                    <!-- em : 중요한 것 강조 강세 넣어줌 -->
+                    <span>메일링 리스트에 가입하시면 WebCafe의 뉴스렝더를 받아보실 수 있습니다.</span>
+                    
+                    <input type="radio" name="mailing" id="mailingOk" value="Yes">
+                    <label for="mailingOk">예</label>
+                    <input type="radio" name="mailing" id="mailingNo" value="No">
+                    <label for="mailingNo">아니오</label>
+                </p>
+                <div class="btnJoinArea">
+                    <button type="submit" id="btnJoin"><img src="images/man.png"
+                         alt="man" width="10px">회원가입</button>
+                    <button type="reset" id="tbnReset">취소</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    
+</body>
+</html>
