@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ani {
+
+        }
+        .delay {
+            margin-top: 50px;
+            width: 700px;
+            height: 500px;
+            border: 1px solid gray;
+            padding-top: 50px;
+        }
+        .delay div  {
+            width: 100px;
+            height: 90px;
+            background: #eee;
+            margin-bottom: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-align: center;
+            line-height: 57px ;
+            transition-duration: 3s;
+            transition-property: all;
+        }
+        #j1 {
+            background: url("../images/jin2.jpg") no-repeat;
+            background-size: contain;
+            border: 3px solid red;
+        }
+        #j3{
+            background: url("../images/jin2.jpg") no-repeat;
+            background-size: contain;
+            border: 3px solid red;
+            transition-delay: 1.5s;
+        }
+        #j2 {
+            background: url("../images/jin1.jpg") no-repeat;
+            border: 3px solid blue;
+            background-size: contain;
+            transition-delay: 1s;
+        }
+        #j4 {
+            background: url("../images/jin1.jpg") no-repeat;
+            border: 3px solid blue;
+            background-size: contain;
+            transition-delay: 0.5s;
+        }
+        .delay:hover #j1 {
+            transform: translate(400px, 200px) rotate(1080deg);
+        }
+        .delay:hover #j2 {
+            transform: translate(300px, 400px) rotate(1080deg);
+        }
+        .delay:hover #j3 {
+            transform: translate(400px, -200px) rotate(1080deg);
+        }
+        .delay:hover #j4 {
+            transform: translate(40px, -400px) rotate(1080deg);
+        }
+    </style>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- jquery 라이브러리  -->
+    <script>
+    
+    </script>
+</head>
+<body>
+    <h1>빙글빙글 진아</h1>
+    <h2>사진에 마우스를 올려보거나 핸드폰으로 누르고있으삼</h2>
+    <p>==================================</p>
+    <div class="delay">
+        <div class="ani" id="j1">
+        </div>
+        <div class="ani" id="j2">
+        </div>
+        <div class="ani" id="j3">
+        </div>
+        <div class="ani" id="j4">
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

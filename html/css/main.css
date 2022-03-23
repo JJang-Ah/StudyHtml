@@ -13,6 +13,10 @@
             padding: 30px;
             border-radius: 10px;
             /* solid는 실선 */
+            margin: 100px 400px;
+            /* left: 100px; */
+            /* left를 써도 적용이 안되는이유 > position이 있어야하는데 없다. */
+            /* position: relative; */
         }
         #wrapper h1{
             font-size: 2em;
